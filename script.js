@@ -598,7 +598,6 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Found', icons.length, 'data-lucide elements');
         } else {
             console.error('Lucide is not available!');
-            alert('Lucide icons failed to load!');
         }
     }, 100);
     
