@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Velorin — Case Study | Ivan Šafranko</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Space+Mono:ital,wght@0,400;0,700;1,400&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#CCFF00",
+                        "primary-dark": "#b3e600",
+                        "background-main": "#0D0D0D",
+                        "layer-1": "#141414",
+                        "layer-2": "#1A1A1A",
+                        "surface": "#1E1E1E",
+                    },
+                    fontFamily: {
+                        serif: ["Playfair Display", "serif"],
+                        mono: ["Space Mono", "monospace"],
+                        sans: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "12px",
+                        '3xl': '32px',
+                    },
+                },
+            },
+        };
+    </script>
+    <style type="text/tailwindcss">
+        body {
+            @apply bg-background-main text-gray-300;
+        }
+        .glass-nav {
+            background: rgba(13, 13, 13, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glow-text {
+            text-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
+        }
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 2rem;
+        }
+        @media (min-width: 768px) {
+            .masonry-grid {
+                column-count: 2;
+            }
+        }
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
+        }
+        ::selection {
+            background-color: #CCFF00;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body class="antialiased dark">
+    <nav class="fixed top-0 w-full z-50 glass-nav">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a class="flex items-center gap-2 text-sm font-mono text-white hover:text-primary transition-colors group"
+                href="/">
+                <span
+                    class="material-symbols-outlined text-lg transform group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                Back to Home
+            </a>
+            <div class="hidden md:block">
+                <span class="text-xl font-serif font-bold text-white tracking-tight">Ivan Šafranko.</span>
+            </div>
+            <div class="font-mono text-[10px] tracking-widest uppercase text-gray-500">
+                Case Study / 2024
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="pt-40 pb-20 bg-background-main">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="max-w-4xl">
+                    <span class="font-mono text-primary text-sm mb-6 tracking-widest uppercase glow-text">01 / Luxury
+                        Jewelry Brand</span>
+                    <h1
+                        class="text-6xl md:text-8xl lg:text-9xl font-serif font-medium text-white mb-10 leading-[1.05] tracking-tight">
+                        Velorin <span class="italic text-gray-400">Jewelry</span>.
+                    </h1>
+                </div>
+                <div class="border-t border-white/10 pt-12 mt-12 max-w-4xl">
+                    <p class="text-2xl md:text-3xl text-gray-400 font-light leading-relaxed">
+                        A premium mobile application designed for an exclusive jewelry house. The interface blends
+                        minimalist elegance with a high-end shopping experience, focusing on tactile interactions and
+                        visual storytelling.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="px-6 bg-background-main">
+            <div class="max-w-7xl mx-auto">
+                <div class="rounded-3xl overflow-hidden border border-white/5 bg-layer-1 shadow-2xl">
+                    <img alt="Velorin Main Presentation" class="w-full h-auto" src="images/velorin/3Home Screen.png" />
+                </div>
+            </div>
+        </section>
+        <section class="py-16 md:py-20 bg-layer-1 border-y border-white/5 mt-20">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+                    <div class="lg:col-span-4">
+                        <div class="font-mono text-primary text-xs font-bold tracking-[0.2em] mb-4">PROJECT CONTEXT
+                        </div>
+                        <h2 class="text-4xl md:text-5xl font-serif text-white">The Luxury Experience</h2>
+                    </div>
+                    <div class="lg:col-span-8 relative">
+                        <div class="absolute left-[-2rem] top-2 bottom-2 w-[2px] bg-primary opacity-50"></div>
+                        <div class="text-xl text-gray-400 font-light leading-relaxed space-y-8">
+                            <p>
+                                Velorin required a digital presence that matched the exclusivity of their physical
+                                ateliers. The challenge was to translate the tactile sensation of luxury shopping into a
+                                digital interface.
+                            </p>
+                            <p>
+                                I focused on a design language that uses whitespace as a luxury commodity, combined with
+                                smooth animations and high-fidelity product photography to create an immersive brand
+                                world.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 bg-background-main">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="masonry-grid">
+                    <div class="masonry-item">
+                        <div class="rounded-2xl overflow-hidden border border-white/5 bg-layer-2">
+                            <img alt="Velorin Home Screen" class="w-full h-auto"
+                                src="images/velorin/3Home Screen.png" />
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <div class="rounded-2xl overflow-hidden border border-white/5 bg-layer-1">
+                            <img alt="Velorin Shop Screen" class="w-full h-auto"
+                                src="images/velorin/4Shop Screen.png" />
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <div class="rounded-2xl overflow-hidden border border-white/5 bg-surface">
+                            <img alt="Velorin Product Detail" class="w-full h-auto"
+                                src="images/velorin/6Product Detail Screen.png" />
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <div class="rounded-2xl overflow-hidden border border-white/5 bg-surface">
+                            <img alt="Velorin Wishlist" class="w-full h-auto"
+                                src="images/velorin/5Wishlist Screen.png" />
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <div class="rounded-2xl overflow-hidden border border-white/5 bg-layer-1 relative group">
+                            <img alt="Velorin Cart"
+                                class="w-full h-auto scale-110 group-hover:scale-105 transition-transform duration-1000"
+                                src="images/velorin/7Cart Screen.png" />
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <div class="rounded-2xl overflow-hidden border border-white/5 bg-surface">
+                            <img alt="Velorin Profile" class="w-full h-auto"
+                                src="images/velorin/13Profile Screen.png" />
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <div class="rounded-2xl overflow-hidden border border-white/5 bg-surface">
+                            <img alt="Velorin Shipping" class="w-full h-auto"
+                                src="images/velorin/8Shipping Screen.png" />
+                        </div>
+                    </div>
+                    <div class="masonry-item">
+                        <div class="rounded-2xl overflow-hidden border border-white/5 bg-surface">
+                            <img alt="Velorin Delivery" class="w-full h-auto"
+                                src="images/velorin/9Delivery Screen.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-32 bg-background-main">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <h2 class="text-5xl font-serif text-white mb-10">Outcome &amp; Reflection</h2>
+                <p class="text-xl text-gray-400 font-light leading-relaxed mb-16">
+                    The Velorin mobile app redefined the brand's digital engagement, seeing a significant increase in
+                    high-value online inquiries. The project successfully balanced functional e-commerce requirements
+                    with an uncompromising luxury aesthetic.
+                </p>
+                <div class="flex justify-center">
+                    <a class="inline-block px-12 py-5 bg-primary text-black font-mono text-sm font-bold uppercase tracking-wider rounded-full hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(204,255,0,0.3)] hover:shadow-[0_0_30px_rgba(204,255,0,0.5)]"
+                        href="/">
+                        Return Home
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-layer-1 border-t border-white/5 group cursor-pointer overflow-hidden relative">
+            <a class="absolute inset-0 z-20" href="moj-opg.html"></a>
+            <div class="max-w-7xl mx-auto px-6 flex justify-between items-center relative z-10">
+                <div>
+                    <span class="font-mono text-xs text-gray-500 uppercase tracking-widest mb-2 block">Next
+                        Project</span>
+                    <h3 class="text-4xl md:text-6xl font-serif text-white group-hover:text-primary transition-colors">
+                        Moj OPG Marketplace</h3>
+                </div>
+                <span
+                    class="material-symbols-outlined text-6xl text-white/20 group-hover:text-primary group-hover:translate-x-4 transition-all duration-500">arrow_forward</span>
+            </div>
+            <div
+                class="absolute inset-0 flex items-center justify-center opacity-[0.02] pointer-events-none select-none">
+                <span class="text-[20vw] font-serif italic whitespace-nowrap">Next Project</span>
+            </div>
+        </section>
+    </main>
+    <footer class="border-t border-white/5 py-16 bg-black">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="text-center md:text-left">
+                <a class="text-xl font-serif font-bold text-white tracking-tight" href="#">
+                    Ivan Šafranko.
+                </a>
+                <p class="text-gray-600 text-sm mt-2">© 2025 All rights reserved.</p>
+            </div>
+            <div class="flex gap-8 font-mono text-xs text-gray-500 uppercase tracking-widest">
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.documentElement.classList.add('dark');
+    </script>
+</body>
+
+</html>
