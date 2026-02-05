@@ -46,8 +46,10 @@
             if (!target) return;
 
             event.preventDefault();
-            const offset = header ? header.offsetHeight : 0;
-            const top = target.getBoundingClientRect().top + window.pageYOffset - (offset + 12);
+            // Consistent offset for sticky header (h-24 = 96px, let's use 85px to be tighter)
+            // We ignore header.offsetHeight to avoid issues when mobile menu is expanded
+            const offset = 85;
+            const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
             window.scrollTo({ top, behavior: "smooth" });
         });
     });
@@ -170,19 +172,6 @@
         }
     }
 
-    // --- Subtle Animations: Hero Tilt ---
-    const heroHeadline = document.querySelector('.hero-headline'); // Check if this class is used
-    // In index.html, the h1 doesn't have .hero-headline, it's just an h1 in the hero section.
-    // Let's target the hero h1 and p
-    const heroTextItems = document.querySelectorAll('section:first-of-type h1, section:first-of-type p');
-    if (heroTextItems.length > 0) {
-        document.addEventListener('mousemove', (e) => {
-            const x = (window.innerWidth / 2 - e.pageX) / 50;
-            const y = (window.innerHeight / 2 - e.pageY) / 50;
-            heroTextItems.forEach(item => {
-                item.style.transform = `rotateX(${y}deg) rotateY(${x}deg)`;
-            });
-        }, { passive: true });
-    }
+
 
 })();
