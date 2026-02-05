@@ -1,7 +1,7 @@
 {
-    "name": "Apartmani Dada - Krapinske Toplice",
-    "short_name": "Apartmani Dada",
-    "description": "Premium apartments in Krapinske Toplice, Croatia",
+    "name": "Ivan Šafranko — UI/UX Designer Portfolio",
+    "short_name": "IŠ Portfolio",
+    "description": "Portfolio of Ivan Šafranko, a UI/UX designer crafting high-performance digital products.",
     "icons": [
         {
             "src": "/icon.svg",
@@ -9,8 +9,8 @@
             "type": "image/svg+xml"
         }
     ],
-    "theme_color": "#1e40af",
-    "background_color": "#ffffff",
+    "theme_color": "#0D0D0D",
+    "background_color": "#0D0D0D",
     "display": "browser",
     "start_url": "/"
 }
