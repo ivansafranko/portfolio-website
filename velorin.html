@@ -41,36 +41,39 @@
         };
     </script>
     <link rel="icon" type="image/svg+xml" href="icon.svg?v=2">
-    <style type="text/tailwindcss">
-        body {
-            @apply bg-background-main text-gray-300;
-        }
+    <style>
         .glass-nav {
             background: rgba(13, 13, 13, 0.85);
             backdrop-filter: blur(12px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .glow-text {
             text-shadow: 0 0 20px rgba(204, 255, 0, 0.2);
         }
+
         .masonry-grid {
             column-count: 1;
             column-gap: 2rem;
         }
+
         @media (min-width: 768px) {
             .masonry-grid {
                 column-count: 2;
             }
         }
+
         @media (min-width: 1024px) {
             .masonry-grid {
                 column-count: 3;
             }
         }
+
         .masonry-item {
             break-inside: avoid;
             margin-bottom: 2rem;
         }
+
         ::selection {
             background-color: #CCFF00;
             color: #000000;
@@ -78,7 +81,7 @@
     </style>
 </head>
 
-<body class="antialiased dark">
+<body class="antialiased dark bg-background-main text-gray-300">
     <nav class="fixed top-0 w-full z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
             <a class="flex items-center gap-2 text-sm font-mono text-white hover:text-primary transition-colors group"
