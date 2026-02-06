@@ -33,6 +33,20 @@
                 closeMenu();
             }
         });
+
+        // Close menu on scroll (throttled check)
+        let isScrolling = false;
+        window.addEventListener('scroll', () => {
+            if (!isScrolling) {
+                window.requestAnimationFrame(() => {
+                    if (mobileMenu.classList.contains("is-open")) {
+                        closeMenu();
+                    }
+                    isScrolling = false;
+                });
+                isScrolling = true;
+            }
+        }, { passive: true });
     }
 
     // --- Smooth Scrolling ---

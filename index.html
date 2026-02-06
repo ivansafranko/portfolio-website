@@ -478,12 +478,31 @@
     <script>
         document.documentElement.classList.add('dark');
     </script>
+    <script>
+        // Optimize resize for mobile (prevent particles reset on address bar show/hide)
+        (function () {
+            var cachedWidth = window.innerWidth;
+            window.addEventListener('resize', function (e) {
+                var newWidth = window.innerWidth;
+                if (newWidth === cachedWidth) {
+                    // Width hasn't changed (likely just height change due to address bar)
+                    e.stopImmediatePropagation();
+                } else {
+                    cachedWidth = newWidth;
+                }
+            }, true); // Capture phase to run before library listeners
+        })();
+    </script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script>
+        // Adjust particle count based on screen size for performance
+        var isMobile = window.innerWidth < 768;
+        var particleCount = isMobile ? 50 : 95;
+
         particlesJS('particles-js', {
             "particles": {
                 "number": {
-                    "value": 95,
+                    "value": particleCount,
                     "density": {
                         "enable": true,
                         "value_area": 630.1693580149663
